@@ -30,7 +30,11 @@
 
 #include "asm_arm.h"
 #include <stdlib.h> /* for abs() */
+#ifndef __BLACKBERRY__
 #include <endian.h>
+#else
+#include <sys/param.h>
+#endif
   
 #ifndef _V_WIDE_MATH
 #define _V_WIDE_MATH
